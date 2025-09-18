@@ -15,7 +15,8 @@ TEST_CASE("Returns 0 for same string") {
 }
 
 TEST_CASE("It doesnt return 0 for same string") {
-    REQUIRE( strcmp_case_insensitive("cheeseburgers", "hamburgers") != 0 );
+    REQUIRE( strcmp_case_insensitive("cheeseburgers", "hamburgers") == -5 );
+    REQUIRE( strcmp_case_insensitive("hamburgers", "cheeseburgers") == 5 );
 }
 
 TEST_CASE("Returns 0 for same string except different case 1") {
